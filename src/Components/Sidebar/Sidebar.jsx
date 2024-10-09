@@ -17,7 +17,7 @@ export const Sidebar = [
         cName: 'nav-text'
     },
     {
-        title: 'Sign Up',
+        title: 'Registration',
         path: '/sign-up',
         icon: <AiIcons.AiFillSmile />,
         cName: 'nav-text'

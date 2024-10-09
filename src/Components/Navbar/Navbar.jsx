@@ -55,7 +55,7 @@ const Navbar = () => {
             </ul>
             <div className='nav-login-cart'>
                 <Link to='/login'><button style={{height: '30px', width: '100px'}}>Login</button></Link>
-                <Link to='/sign-up'><button style={{height: '30px', width: '100px'}}>Sign Up</button></Link>
+                <Link to='/sign-up'><button style={{height: '30px', width: '150px'}}>Registration</button></Link>
                 <Link to='/cart'><img src={cart_icon} alt="" /></Link>
                 <div className='nav-cart-count'>0</div>
             </div>
