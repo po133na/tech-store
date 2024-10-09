@@ -1,17 +1,16 @@
 .navbar{
     display: flex;
     justify-content: space-around;
-    padding: 16px;
     box-shadow: 0 1px 3px -2px black;
     width: 100%;
-    background-color: rgb(103, 97, 87);
+    background-color: #cbbcb1;
 }
 
 .nav-logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     width: 100px;
     height: 100px;
 }
@@ -58,12 +57,13 @@
 .nav-login-cart{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 20px;
 }
 
 .nav-login-cart img{
     width: 50px;
     height: 50px;
+    margin-right: 20px;
 }
 
 .nav-login-cart button{
@@ -94,7 +94,7 @@
     border-radius: 11px;
     font-size: 14px;
     color: white;
-    background: red;
+    background: rgb(236, 45, 45);
 }
 
 .menu-bars{
@@ -112,7 +112,7 @@
 
 .nav-menu{
     background-color: rgb(150, 140, 123);
-    width: 250px;
+    width: 220px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -131,9 +131,9 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0px 8px 10px;
     list-style: none;
-    height: 60px;
+    height: 100px;
 }
 
 .nav-text a{

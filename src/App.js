@@ -7,9 +7,10 @@ import Shop from './Pages/Shop';
 import Product from './Pages/Product';
 import ShopCategory from './Pages/ShopCategory';
 import Cart from './Pages/Cart';
-import LoginSignup from './Pages/LoginSignup';
+import Login from './Pages/Login';
 import Delivery from './Pages/Delivery';
-import Catalogue from './Pages/Catalogue';
+import Catalogue from './Pages/Categories';
+import Signup from './Pages/Signup';
 
 function App() {
   return (
@@ -22,11 +23,12 @@ function App() {
         <Route path='/coffee2' element={<ShopCategory category="coffee2"/>}/>
         <Route path='/coffee3' element={<ShopCategory category="coffee3"/>}/>
         <Route path='/products' element={<Product/>}/>
-        <Route path='/catalogue' element={<Catalogue/>}/>
+        <Route path='/categories' element={<Catalogue/>}/>
           <Route path=':productId' element={<Product/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/delivery' element={<Delivery/>}/>
-        <Route path='/login' element={<LoginSignup/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/sign-up' element={<Signup/>}/>
       </Routes>
       </BrowserRouter>
     </div>

@@ -24,22 +24,7 @@ const Navbar = () => {
             <Link to='#' className='menu-bars'>
                 <FaIcons.FaBars onClick={showSidebar} />
             </Link>
-            <div className='nav-logo'>
-                <img src={logo} alt="" />
-                <h1 onClick={() => { setMenu(""); } }><Link style={{ textDecoration: 'none' }} to='/'>Coffee Shop</Link></h1>
-            </div>
-            <ul className='nav-menu'>
-                <li onClick={() => { setMenu("shop"); } }><Link style={{ textDecoration: 'none' }} to='/shop'>Shop</Link>{menu === "shop" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("coffee1"); } }><Link style={{ textDecoration: 'none' }} to='/coffee1'>Option1</Link>{menu === "coffee1" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("coffee2"); } }><Link style={{ textDecoration: 'none' }} to='/coffee2'>Option2</Link>{menu === "coffee2" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("coffee3"); } }><Link style={{ textDecoration: 'none' }} to='/coffee3'>Option3</Link>{menu === "coffee3" ? <hr /> : <></>}</li>
-            </ul>
-            <div className='nav-login-cart'>
-                <Link to='/login'><button>Login</button></Link>
-                <Link to='/cart'><img src={cart_icon} alt="" /></Link>
-                <div className='nav-cart-count'>0</div>
-            </div>
-        </div><nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
                     <li className='navbar-toggle'>
                         <Link to="#" className='menu-bars-close'>
@@ -58,6 +43,23 @@ const Navbar = () => {
                     })}
                 </ul>
             </nav>
+            <div className='nav-logo'>
+                <img src={logo} alt="" />
+                <h1 onClick={() => { setMenu(""); } }><Link style={{ textDecoration: 'none', color: 'white' }} to='/'>Coffeer</Link></h1>
+            </div>
+            <ul className='nav-menu'>
+                <li onClick={() => { setMenu("shop"); } }><Link style={{ textDecoration: 'none' }} to='/shop'>Shop</Link>{menu === "shop" ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu("coffee1"); } }><Link style={{ textDecoration: 'none' }} to='/coffee1'>Option1</Link>{menu === "coffee1" ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu("coffee2"); } }><Link style={{ textDecoration: 'none' }} to='/coffee2'>Option2</Link>{menu === "coffee2" ? <hr /> : <></>}</li>
+                <li onClick={() => { setMenu("coffee3"); } }><Link style={{ textDecoration: 'none' }} to='/coffee3'>Option3</Link>{menu === "coffee3" ? <hr /> : <></>}</li>
+            </ul>
+            <div className='nav-login-cart'>
+                <Link to='/login'><button style={{height: '30px', width: '100px'}}>Login</button></Link>
+                <Link to='/sign-up'><button style={{height: '30px', width: '100px'}}>Sign Up</button></Link>
+                <Link to='/cart'><img src={cart_icon} alt="" /></Link>
+                <div className='nav-cart-count'>0</div>
+            </div>
+        </div>
             </IconContext.Provider>
             </>
     )

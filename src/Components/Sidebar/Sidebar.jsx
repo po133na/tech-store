@@ -17,20 +17,26 @@ export const Sidebar = [
         cName: 'nav-text'
     },
     {
+        title: 'Sign Up',
+        path: '/sign-up',
+        icon: <AiIcons.AiFillSmile />,
+        cName: 'nav-text'
+    },
+    {
         title: 'All Products',
         path: '/products',
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'
     },
     {
-        title: 'Catalogue',
-        path: '/catalogue',
+        title: 'Categories',
+        path: '/categories',
         icon: <AiIcons.AiOutlineBook />,
         cName: 'nav-text'
     },
     {
         title: 'Cart',
-        path: '/',
+        path: '/cart',
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'
     },
@@ -40,4 +46,5 @@ export const Sidebar = [
         icon: <FaIcons.FaCar />,
         cName: 'nav-text'
     },
+    
 ]

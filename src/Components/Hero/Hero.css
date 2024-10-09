@@ -2,6 +2,7 @@
     height: 100vh;
     background: linear-gradient(180deg, #e6b6a3, #fcebd5f2 60%);
     display: flex;
+    background-image: url('../Assets/back-cof.png');
 }
 
 .hero-left{
