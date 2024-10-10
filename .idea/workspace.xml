@@ -6,13 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="331dcbf2-c27d-4474-b427-c3c29a517bab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728384914818</updated>
       <workItem from="1728384916580" duration="1694000" />
-      <workItem from="1728476736297" duration="9719000" />
+      <workItem from="1728476736297" duration="11928000" />
     </task>
     <servers />
   </component>

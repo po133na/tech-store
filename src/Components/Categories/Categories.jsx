@@ -1,24 +1,12 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import withLogging from './withLogging';
 import './Categories.css';
+import categories from '../../models/category.model';
+import products from "../../models/products.model";
 
 const Categories= ({ handleLog }) => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [filteredProducts, setFilteredProducts] = useState([]);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const categories = ['Whole Beans', 'Ground Coffee', 'Milk', 'Coffee Machines', 'Mugs', 'Pitchers'];
-
-    const products = useMemo(() => [
-        { id: 1, name: 'Arabica Whole Beans', category: 'Whole Beans', price: '$20', image: '/images/beans.jpg' },
-        { id: 2, name: 'Robusta Whole Beans', category: 'Whole Beans', price: '$18', image: '/images/beans.jpg' },
-        { id: 3, name: 'Ground Arabica Coffee', category: 'Ground Coffee', price: '$15', image: '/images/ground.jpg' },
-        { id: 4, name: 'Ground Robusta Coffee', category: 'Ground Coffee', price: '$12', image: '/images/ground.jpg' },
-        { id: 5, name: 'Milk', category: 'Milk', price: '$3', image: '/images/milk.jpg' },
-        { id: 6, name: 'DeLonghi Coffee Machine', category: 'Coffee Machines', price: '$300', image: '/images/coffee_machine.jpg' },
-        { id: 7, name: 'Ceramic Mug', category: 'Mugs', price: '$10', image: '/images/mug.jpg' },
-        { id: 8, name: 'Metal Pitcher', category: 'Pitchers', price: '$25', image: '/images/pitcher.jpg' },
-    ], []);
 
     const handleCategorySelect = useCallback((category) => {
         setSelectedCategory(category);
@@ -31,7 +19,7 @@ const Categories= ({ handleLog }) => {
             setFilteredProducts(filtered);
             handleLog('Products filtered by category');
         }
-    }, [selectedCategory, products, handleLog]);
+    }, [selectedCategory, handleLog]);
 
     useEffect(() => {
         handleLog('CategoriesPage component mounted');
@@ -43,7 +31,7 @@ const Categories= ({ handleLog }) => {
                 {category}
             </button>
         ))
-    ), [categories, handleCategorySelect]);
+    ), [handleCategorySelect]);
 
     return (
         <div className="categories-page">
