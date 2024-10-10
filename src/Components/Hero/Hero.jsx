@@ -1,7 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import coffee_icon from '../Assets/coffee_icon.png'
-import arrow_icon from '../Assets/arrow_icon.png'
 
 const Hero = () => {
   return (
@@ -9,15 +7,24 @@ const Hero = () => {
         <div className="hero-left">
             <div>
                 <div className="hero-coffee-icon">
-                    <p>New</p>
-                    <img src={coffee_icon} alt=""/>
-                    <p>Coffee</p>
-                <p>For Everyone</p>
+                    <h1>Coffeer</h1>
+                <h1>For Everyone</h1>
                 </div>
             </div>
             <div className="hero-latest-btn">
-                <div>Latest Arrivals</div>
-                <img src={arrow_icon} alt=""/>
+                <div>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a
+                        page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                        normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                        like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+                        as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their infancy. Various versions have evolved over the years, sometimes by accide
+                    </p>
+                </div>
+                <div>
+                    <button className="hero-latest-button">Shop Now</button>
+                </div>
             </div>
         </div>
         <div className="hero-right">
