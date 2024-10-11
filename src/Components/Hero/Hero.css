@@ -53,8 +53,12 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
+    text-decoration-line: none;
 }
 
 .hero-latest-button:hover {
     background: #9d7e5f;
+    text-decoration: none;
+    text-decoration-line: none;
 }

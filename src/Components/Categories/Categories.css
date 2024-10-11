@@ -38,10 +38,17 @@
     padding-left: 20px;
 }
 
+
 .product-cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+.product-cards p{
+    display: flex;
+    margin-top: 15px;
+    margin-left: -200px;
 }
 
 .product-card {

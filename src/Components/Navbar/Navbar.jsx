@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Navbar.css'
 
 import logo from '../Assets/Logo_coff.png'
-import cart_icon from '../Assets/cart_icon.png'
+import cart_icon from '../Assets/cart-icon.png'
 
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";

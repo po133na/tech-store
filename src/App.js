@@ -1,36 +1,38 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { CategoriesContext } from './Components/Categories/Categories'; // Import your context
 
 import Shop from './Pages/Shop';
-import Product from './Pages/Product';
-import ShopCategory from './Pages/ShopCategory';
 import Cart from './Pages/Cart';
 import Login from './Components/Login/Login';
 import Delivery from './Pages/Delivery';
 import Registration from "./Components/Signup/Registration";
-import {useState} from "react";
 import Categories from "./Components/Categories/Categories";
+import ProductDetails from './Pages/ProductDetails';
+import ProductList from './Pages/ProductList';
 
 function App() {
     const [users, setUsers] = useState({});
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
     return (
         <div>
             <BrowserRouter>
-                <Navbar/>
-                <Routes>
-                    <Route path='/' element={<Shop/>}/>
-                    <Route path="/login" element={<Login users={users}/>}/>
-                    <Route path="/sign-up" element={<Registration setUsers={setUsers}/>}/>
-                    <Route path='/coffee1' element={<ShopCategory category="coffee1"/>}/>
-                    <Route path='/coffee2' element={<ShopCategory category="coffee2"/>}/>
-                    <Route path='/coffee3' element={<ShopCategory category="coffee3"/>}/>
-                    <Route path='/products' element={<Product/>}/>
-                    <Route path='/categories' element={<Categories/>}/>
-                    <Route path=':productId' element={<Product/>}/>
-                    <Route path='/cart' element={<Cart/>}/>
-                    <Route path='/delivery' element={<Delivery/>}/>
-                </Routes>
+                <Navbar />
+                <CategoriesContext.Provider value={{ filteredProducts, setFilteredProducts }}>
+                    <Routes>
+                        <Route path='/' element={<Shop />} />
+                        <Route path="/login" element={<Login users={users} />} />
+                        <Route path="/sign-up" element={<Registration setUsers={setUsers} />} />
+                        <Route path='/categories' element={<Categories />} />
+                        <Route path='/categories/:productId' element={<ProductDetails />} />
+                        <Route path='/cart' element={<Cart />} />
+                        <Route path='/delivery' element={<Delivery />} />
+                        <Route path='/products' element={<ProductList />} />
+                    </Routes>
+                </CategoriesContext.Provider>
             </BrowserRouter>
         </div>
     );
