@@ -1,16 +1,20 @@
 .categories-page {
     display: flex;
     padding: 20px;
+    height: 95vh;
+    background: linear-gradient(180deg, #231f1f, rgba(47, 47, 47, 0.9) 70%);
 }
 
 .categories-sidebar {
     width: 20%;
     padding-right: 20px;
+    margin-left: 100px;
 }
 
 .categories-sidebar h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: white;
 }
 
 .categories-list {
@@ -21,16 +25,17 @@
 
 .category-button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #9d7e5f;
+    border: 1px solid #9d7e5f;
     color: white;
-    border: none;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     text-align: left;
 }
 
 .category-button:hover {
-    background-color: #0056b3;
+    background-color: #d3b28f;
 }
 
 .products-section {
@@ -38,21 +43,24 @@
     padding-left: 20px;
 }
 
+.products-section h3 {
+    width: 80%;
+    color: white;
+    text-align: center;
+    margin-left: -100px;
+}
 
 .product-cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-.product-cards p{
-    display: flex;
-    margin-top: 15px;
-    margin-left: -200px;
+    margin-left: 70px;
+    padding-right: 200px;
+    margin-top: 20px;
 }
 
 .product-card {
-    background-color: #f9f9f9;
+    background-color: #dacdbf;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
