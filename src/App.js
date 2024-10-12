@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { CategoriesContext } from './Components/Categories/Categories'; // Import your context
+import { CategoriesContext } from './Components/Categories/Categories';
 
 import Shop from './Pages/Shop';
 import Cart from './Pages/Cart';
@@ -11,7 +11,7 @@ import Delivery from './Pages/Delivery';
 import Registration from "./Components/Signup/Registration";
 import Categories from "./Components/Categories/Categories";
 import ProductDetails from './Pages/ProductDetails';
-import ProductList from './Pages/ProductList';
+import ProductList from './Components/ProductList/ProductList';
 
 function App() {
     const [users, setUsers] = useState({});
