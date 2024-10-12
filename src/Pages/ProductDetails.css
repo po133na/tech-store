@@ -1,0 +1,19 @@
+.body-container{
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    gap: 100px;
+}
+
+
+.product-details h2{
+    color: black;
+    font-weight: 600;
+}
+
+.photo-item img{
+    width: 500px;
+    height: 500px;
+    margin: 100px;
+}
+

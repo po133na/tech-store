@@ -60,3 +60,8 @@
     background: #9d7e5f;
     text-decoration: none;
 }
+
+.butts{
+    display: flex;
+    align-items: center;
+}
