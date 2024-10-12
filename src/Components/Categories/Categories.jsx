@@ -53,11 +53,11 @@ const Categories = ({ handleLog }) => {
                 </aside>
 
                 <section className="products-section">
-                    <h3>{selectedCategory ? `Products: ${selectedCategory}` : 'Select a category'}</h3>
-                    <div className="product-cards">
+                    <h3>{selectedCategory ? ` ${selectedCategory}` : 'Select a category'}</h3>
+                    <div className="category-cards">
                         {filteredProducts.length > 0 ? (
                             filteredProducts.map((product) => (
-                                <div key={product.id} className="product-card">
+                                <div key={product.id} className="category-card">
                                     <img src={product.image} alt={product.name} className="product-image" />
                                     <h4 className="product-name">{product.name}</h4>
                                     <p className="product-price">{product.price}</p>
@@ -67,7 +67,7 @@ const Categories = ({ handleLog }) => {
                                 </div>
                             ))
                         ) : (
-                            <p>Tap one to see all the products.</p>
+                            <p className="category-text">Choose category to see all the products.</p>
                         )}
                     </div>
                 </section>
