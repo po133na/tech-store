@@ -10,8 +10,11 @@ const Login = ({ users }) => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (users[username] && users[username].password === password) {
+      localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('username', username);
       navigate('/products');
     } else {
+      localStorage.setItem('isAuthenticated', 'false');
       alert('Invalid username or password');
     }
   };

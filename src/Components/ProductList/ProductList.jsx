@@ -1,25 +1,23 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import products from '../../models/products.model';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
+import withAuth from "../Signup/withAuth";
 
 const ProductList = () => {
     const [filteredProducts, setFilteredProducts] = useState(products);
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const memoizedProducts = useMemo(() => {
-        return products.filter(product =>
-            product.name.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    }, [searchTerm]);
 
     const handleSearch = useCallback((e) => {
-        setSearchTerm(e.target.value);
+        const query = e.target.value.toLowerCase();
+        const filtered = products.filter(product =>
+            product.name.toLowerCase().includes(query)
+        );
+        setFilteredProducts(filtered);
     }, []);
 
     useEffect(() => {
-        setFilteredProducts(memoizedProducts);
-    }, [memoizedProducts]);
+        console.log('ProductList mounted');
+    }, []);
 
     return (
         <div className="product-list">
@@ -27,9 +25,8 @@ const ProductList = () => {
             <input
                 type="text"
                 placeholder="Search for products..."
-                value={searchTerm}
-                onChange={handleSearch}
                 className="search-input"
+                onChange={handleSearch}
             />
             <div className="product-cards">
                 {filteredProducts.map((product) => (
@@ -47,4 +44,4 @@ const ProductList = () => {
     );
 };
 
-export default ProductList;
+export default withAuth(ProductList);
