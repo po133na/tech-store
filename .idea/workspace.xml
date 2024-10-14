@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="331dcbf2-c27d-4474-b427-c3c29a517bab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Categories/Categories.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Categories/Categories.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ProductList/ProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProductList/ProductList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/products.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/products.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

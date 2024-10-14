@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState, useMemo } from 'react';
 import products from '../../models/products.model';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
@@ -6,19 +6,21 @@ import withAuth from "../Signup/withAuth";
 import plus from '../Assets/plus.png'
 
 const ProductList = () => {
-    const [filteredProducts, setFilteredProducts] = useState(products);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearch = useCallback((e) => {
-        const query = e.target.value.toLowerCase();
-        const filtered = products.filter(product =>
-            product.name.toLowerCase().includes(query)
-        );
-        setFilteredProducts(filtered);
+        setSearchQuery(e.target.value.toLowerCase());
     }, []);
 
     useEffect(() => {
         console.log('ProductList mounted');
     }, []);
+
+    const filteredProducts = useMemo(() => {
+        return products.filter(product =>
+            product.name.toLowerCase().includes(searchQuery)
+        );
+    }, [searchQuery]);
 
     return (
         <div className="product-list">
