@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+.plus{
+    width: 30px;
+    height: 30px;
+}
+
 .product-list h2{
     padding-top: 30px;
     color: rgb(134, 104, 64);

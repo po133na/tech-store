@@ -3,6 +3,7 @@ import products from '../../models/products.model';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
 import withAuth from "../Signup/withAuth";
+import plus from '../Assets/plus.png'
 
 const ProductList = () => {
     const [filteredProducts, setFilteredProducts] = useState(products);
@@ -31,6 +32,7 @@ const ProductList = () => {
             <div className="product-cards">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product-card">
+                                                < img className='plus' src={plus} alt="" /> 
                         <img src={product.image} alt={product.name} className="product-image" />
                         <h4 className="product-name">{product.name}</h4>
                         <p className="product-price">{product.price}</p>
