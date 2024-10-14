@@ -1,6 +1,7 @@
 import beans from '../Components/Assets/coffee-bean.jpeg';
 import ground from '../Components/Assets/ground_coffee.webp';
 import milk from '../Components/Assets/oat-milk.avif';
+import machine from '../Components/Assets/machine.jpeg';
 import mug from '../Components/Assets/mug.webp';
 import pitcher from '../Components/Assets/pitcher.jpg';
 import first from '../Components/Assets/1.jpg';
@@ -20,7 +21,6 @@ import eightt from '../Components/Assets/18.jpg';
 import ninet from '../Components/Assets/19.jpg';
 import twenty from '../Components/Assets/20.jpg';
 import to from '../Components/Assets/21.jpg';
-import tt from '../Components/Assets/22.jpg';
 import tthree from '../Components/Assets/23.jpg';
 import tf from '../Components/Assets/24.jpg';
 import tfive from '../Components/Assets/25.jpg';
@@ -61,7 +61,7 @@ export const products = [
     { id: 19, name: 'Arabica Coffee Beans', category: 'Whole Beans', price: '$19', image: ninet, description: 'High-quality Arabica beans with a smooth and delicate flavor. Ideal for all brewing methods, from espresso to French press.' },
     { id: 20, name: 'Decaf Ground Coffee', category: 'Ground Coffee', price: '$17', image: twenty, description: 'Ground decaf coffee with a rich flavor, minus the caffeine. Perfect for late-night coffee lovers who want to enjoy a cup without the buzz.' },
     { id: 21, name: 'Soy Milk', category: 'Milk', price: '$4', image: to, description: 'Creamy soy milk, a plant-based dairy alternative perfect for adding to coffee or using in smoothies. Vegan and lactose-free.' },
-    { id: 22, name: 'AeroPress', category: 'Coffee Machines', price: '$40', image: tt, description: 'A compact and innovative coffee maker that brews smooth and rich coffee in just minutes. Perfect for travelers and coffee enthusiasts.' },
+    { id: 22, name: 'AeroPress', category: 'Coffee Machines', price: '$40', image: machine, description: 'A compact and innovative coffee maker that brews smooth and rich coffee in just minutes. Perfect for travelers and coffee enthusiasts.' },
     { id: 23, name: 'Enamel Mug', category: 'Mugs', price: '$11', image: tthree, description: 'A vintage-style enamel mug, lightweight and durable. Great for outdoor adventures or a retro touch at home.' },
     { id: 24, name: 'Blend of the Month', category: 'Whole Beans', price: '$25', image: tf, description: 'A premium selection of whole coffee beans, expertly blended for a rich and balanced flavor. Rotates monthly to offer new experiences' },
     { id: 25, name: 'Hazelnut Ground Coffee', category: 'Ground Coffee', price: '$16', image: tfive, description: 'Ground coffee infused with natural hazelnut flavor. Perfect for those who enjoy a nutty twist to their morning cup.' },

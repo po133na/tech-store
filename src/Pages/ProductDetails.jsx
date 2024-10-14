@@ -30,9 +30,9 @@ const ProductDetails = () => {
             <div className='body-container'>
                 <div className="product-details">
                     <h2>{product.name}</h2>
-                    <p>Price: {product.price}</p>
-                    <p>Category: {product.category}</p>
-                    <p>Description: {product.description || 'No description available.'}</p>
+                    <p><strong>Price:</strong> {product.price}</p>
+                    <p><strong>Category:</strong> {product.category}</p>
+                    <p><strong>Description:</strong> {product.description || 'No description available.'}</p>
                 </div>
                 <div className="photo-item"> 
                     <img src={product.image} alt={product.name} /> 

@@ -5,47 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="331dcbf2-c27d-4474-b427-c3c29a517bab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/39.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Assets/9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ProductList/ProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProductList/ProductList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/products.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/products.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,12 +39,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Rebasing main",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Applications/WebStorm 2.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
