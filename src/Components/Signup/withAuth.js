@@ -6,7 +6,7 @@ const withAuth = (WrappedComponent) => {
 
         if (!isAuthenticated) {
             console.log(isAuthenticated);
-            return <h2>You need to log in to access this page.</h2>;
+            return <h2 className="error">You need to log in to access this page.</h2>;
         }
 
         return <WrappedComponent {...props} />;

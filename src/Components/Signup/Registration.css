@@ -12,6 +12,11 @@ h2 {
     text-align: center;
 }
 
+.error {
+    margin-top: 20px;
+    color: #2c2a29;
+}
+
 .registration-form {
     background-color: #171717;
     padding: 50px;
