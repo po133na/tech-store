@@ -31,6 +31,9 @@ const ProductList = () => {
                 className="search-input"
                 onChange={handleSearch}
             />
+            <Link to="/account" className="account-link">
+                Go to Account Page
+            </Link>
             <div className="product-cards">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="product-card">

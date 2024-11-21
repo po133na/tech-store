@@ -11,9 +11,10 @@ import Registration from "./Components/Signup/Registration";
 import Categories from "./Components/Categories/Categories";
 import ProductDetails from './Pages/ProductDetails';
 import ProductList from './Components/ProductList/ProductList';
+import UserPage from "./Components/UserPage/UserPage";
 
 function App() {
-    const [users, setUsers] = useState({});
+    const [currentUser, setCurrentUser] = useState(null); // Добавлено состояние для текущего пользователя
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     return (
@@ -23,8 +24,9 @@ function App() {
                 <CategoriesContext.Provider value={{ filteredProducts, setFilteredProducts }}>
                     <Routes>
                         <Route path='/' element={<Shop />} />
-                        <Route path="/login" element={<Login users={users} />} />
-                        <Route path="/sign-up" element={<Registration setUsers={setUsers} />} />
+                        <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+                        <Route path="/sign-up" element={<Registration />} />
+                        <Route path="/account" element={<UserPage currentUser={currentUser} />} />
                         <Route path='/categories' element={<Categories />} />
                         <Route path='/categories/:productId' element={<ProductDetails />} />
                         <Route path='/cart' element={<Cart />} />

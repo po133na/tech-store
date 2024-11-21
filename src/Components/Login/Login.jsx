@@ -1,39 +1,64 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
-const Login = ({ users }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const API_URL = "http://localhost:5001/users";
+
+const Login = ({ setCurrentUser }) => {
+  const [credentials, setCredentials] = useState({
+    username: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (users[username] && users[username].password === password) {
-      localStorage.setItem('isAuthenticated', 'true');
-      localStorage.setItem('username', username);
-      navigate('/products');
-    } else {
-      localStorage.setItem('isAuthenticated', 'false');
-      alert('Invalid username or password');
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCredentials({ ...credentials, [name]: value });
   };
 
-  const handleRegisterRedirect = () => {
-    navigate('/sign-up');
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) {
+        throw new Error("Failed to fetch users");
+      }
+
+      const users = await response.json();
+      const user = users.find(
+          (u) => u.username === credentials.username && u.password === credentials.password
+      );
+
+      if (user) {
+        localStorage.setItem("isAuthenticated", "true");
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        setCurrentUser(user);
+        navigate("/account");
+      } else {
+        setError("Invalid username or password");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      setError("Failed to log in. Please try again.");
+    }
   };
 
   return (
       <div className="login-container">
-        <form onSubmit={ handleLogin } className="login-form">
+        <form onSubmit={handleLogin} className="login-form">
           <h2>Login</h2>
+          {error && <p className="error-message">{error}</p>}
           <div className="input-container">
             <label htmlFor="username">Username:</label>
             <input
                 type="text"
                 id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                name="username"
+                value={credentials.username}
+                onChange={handleChange}
                 className="input"
                 required
             />
@@ -43,23 +68,15 @@ const Login = ({ users }) => {
             <input
                 type="password"
                 id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                name="password"
+                value={credentials.password}
+                onChange={handleChange}
                 className="input"
                 required
             />
           </div>
           <button type="submit" className="button">Login</button>
         </form>
-
-        <div className="register-container">
-          <p>
-            Don't have an account?{' '}
-            <span onClick={ handleRegisterRedirect } className="link">
-            Register here
-          </span>
-          </p>
-        </div>
       </div>
   );
 };

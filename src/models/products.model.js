@@ -84,3 +84,7 @@ export const products = [
 
 
 export default products;
+
+// User Data: json-server --watch src/models/db.json --port 5001
+
+// Product Data: json-server --watch src/models/db-category.json --port 5002

@@ -1,15 +1,48 @@
 import React, { useState, useEffect, useCallback, useMemo, createContext } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import withLogging from './withLogging';
 import './Categories.css';
-import categories from '../../models/category.model';
-import products from '../../models/products.model';
 
 export const CategoriesContext = createContext();
 
+const API_URL = 'http://localhost:5002';
+
 const Categories = ({ handleLog }) => {
+    const [categories, setCategories] = useState([]);
+    const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [filteredProducts, setFilteredProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await axios.get(`${API_URL}/categories`);
+                setCategories(response.data);
+                handleLog('Categories fetched successfully with axios');
+            } catch (error) {
+                console.error('Error fetching categories with axios:', error);
+                handleLog('Failed to fetch categories');
+            }
+        };
+
+        fetchCategories();
+    }, [handleLog]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get(`${API_URL}/products`);
+                setProducts(response.data);
+                handleLog('Products fetched successfully with axios');
+            } catch (error) {
+                console.error('Error fetching products with axios:', error);
+                handleLog('Failed to fetch products');
+            }
+        };
+
+        fetchProducts();
+    }, [handleLog]);
 
     const handleCategorySelect = useCallback((category) => {
         setSelectedCategory(category);
@@ -24,7 +57,7 @@ const Categories = ({ handleLog }) => {
         } else {
             setFilteredProducts([]);
         }
-    }, [selectedCategory, handleLog]);
+    }, [selectedCategory, products, handleLog]);
 
     useEffect(() => {
         handleLog('CategoriesPage component mounted');
@@ -33,14 +66,14 @@ const Categories = ({ handleLog }) => {
     const categoryList = useMemo(() => (
         categories.map((category) => (
             <button
-                key={category}
-                onClick={() => handleCategorySelect(category)}
+                key={category.id}
+                onClick={() => handleCategorySelect(category.name)}
                 className="category-button"
             >
-                {category}
+                {category.name}
             </button>
         ))
-    ), [handleCategorySelect]);
+    ), [categories, handleCategorySelect]);
 
     return (
         <CategoriesContext.Provider value={{ filteredProducts }}>

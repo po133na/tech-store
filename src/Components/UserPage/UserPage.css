@@ -1,0 +1,67 @@
+.user-page {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.field span {
+    display: inline-block;
+    width: calc(100% - 120px);
+}
+
+.field input {
+    width: calc(100% - 120px);
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button.save {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.edit {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.button.delete {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

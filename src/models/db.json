@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "e8fb",
+      "username": "a1",
+      "password": "a1",
+      "email": "a1@gmail.com",
+      "phone": "ee3e3e3"
+    },
+    {
+      "id": "d6dd",
+      "username": "a1",
+      "password": "a1",
+      "email": "a1@gmail.com",
+      "phone": "32434"
+    },
+    {
+      "id": "566e",
+      "username": "b1",
+      "password": "b1",
+      "email": "b1@gmail.com",
+      "phone": "3233"
+    },
+    {
+      "id": "a100",
+      "username": "w1",
+      "password": "w1",
+      "email": "w1@gmail.com",
+      "phone": "12213"
+    },
+    {
+      "id": "5a2e",
+      "username": "yul",
+      "password": "yul44rr",
+      "email": "yuliya@gmail.com",
+      "phone": "1234567"
+    }
+  ]
+}

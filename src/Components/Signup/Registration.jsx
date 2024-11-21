@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import './Registration.css';
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Registration.css";
+import axios from "axios";
 
-const Registration = ({ setUsers }) => {
+const API_URL = "http://localhost:5001/users";
+
+const Registration = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -10,26 +13,30 @@ const Registration = ({ setUsers }) => {
     phone: '',
   });
 
-  const navigate = useNavigate();
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleLoginRedirect = () => {
-    navigate('/login');
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Store user credentials in the dictionary
-    setUsers(prevUsers => ({
-      ...prevUsers,
-      [formData.username]: { password: formData.password, email: formData.email, phone: formData.phone },
-    }));
-    alert('Registration successful! You can now log in.');
+
+    axios
+        .post(API_URL, formData)
+        .then((response) => {
+          localStorage.setItem('userId', response.data.id);
+          alert('Registration successful!');
+          navigate("/login");
+        })
+        .catch((error) => {
+          console.error('Registration failed:', error);
+          setError('Failed to register. Please try again.');
+        });
   };
+
+  const navigate = useNavigate();
 
   return (
       <div className="registration-container">
@@ -90,15 +97,6 @@ const Registration = ({ setUsers }) => {
 
           <button type="submit" className="button">Register</button>
         </form>
-
-        <div className="register-container">
-          <p>
-            Already have an account?{' '}
-            <span onClick={handleLoginRedirect} className="link">
-            Login here
-          </span>
-          </p>
-        </div>
       </div>
   );
 };
