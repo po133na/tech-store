@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { CategoriesContext } from './Components/Categories/Categories';
 import Shop from './Pages/Shop';
-import Cart from './Pages/Cart';
+import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
 import Delivery from './Pages/Delivery';
 import Registration from "./Components/Signup/Registration";

@@ -34,6 +34,20 @@
       "password": "yul44rr",
       "email": "yuliya@gmail.com",
       "phone": "1234567"
+    },
+    {
+      "id": "c370",
+      "username": "ar",
+      "password": "ar",
+      "email": "ar@gmail.com",
+      "phone": "979"
+    },
+    {
+      "id": "6cf1",
+      "username": "viva",
+      "password": "vova1",
+      "email": "vladimir@gmail.com",
+      "phone": "32311111"
     }
   ]
 }

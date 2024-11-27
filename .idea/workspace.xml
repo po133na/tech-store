@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="331dcbf2-c27d-4474-b427-c3c29a517bab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Categories/Categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProductList/ProductList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Signup/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Signup/Registration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UserPage/UserPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UserPage/UserPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cart/Cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProductDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/db-category.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/db-category.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/products.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/products.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +60,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/Cart" />
       <recent name="$PROJECT_DIR$/src/Components/ProductList" />
       <recent name="$PROJECT_DIR$/src/Components/Categories" />
       <recent name="$PROJECT_DIR$/src/Components/Signup" />

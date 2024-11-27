@@ -1,67 +1,100 @@
-.user-page {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+/* Основной контейнер страницы пользователя */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    background: #2c2822;
 }
 
-.field {
+.user-page {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-page h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.user-details {
+    margin-bottom: 30px;
+}
+
+.user-details div {
+    font-size: 18px;
     margin-bottom: 15px;
 }
 
-.field strong {
-    display: inline-block;
-    width: 100px;
+.user-details strong {
+    color: #333;
+    font-weight: bold;
 }
 
-.field span {
-    display: inline-block;
-    width: calc(100% - 120px);
+.user-details input {
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
 }
 
-.field input {
-    width: calc(100% - 120px);
-    padding: 5px;
-    font-size: 1rem;
-}
-
-.buttons {
+.actions {
+    text-align: center;
     margin-top: 20px;
 }
 
-.button {
-    margin-right: 10px;
-    padding: 10px 15px;
-    font-size: 1rem;
+.actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.button.save {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.actions button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-.button.cancel {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.actions button:nth-child(2) {
+    background-color: #dc3545;
 }
 
-.button.edit {
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.actions button:nth-child(2):hover {
+    background-color: #c82333;
 }
 
-.button.delete {
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.user-details input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions button:last-child {
+    background-color: #6c757d;
+}
+
+.actions button:last-child:hover {
+    background-color: #5a6268;
 }

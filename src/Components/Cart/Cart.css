@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    background: linear-gradient(180deg, #231f1f, rgba(47, 47, 47, 0.9) 70%);
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1a1515;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(204, 204, 204);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.cart-summary p {
+    margin: 0;
+    font-weight: bold;
+    color: #555;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cccccc;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.cart-item-details h4 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.cart-item-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+}
+
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+
+.cart-footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #cccccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-footer h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cart-footer p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
