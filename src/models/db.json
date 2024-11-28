@@ -48,6 +48,13 @@
       "password": "vova1",
       "email": "vladimir@gmail.com",
       "phone": "32311111"
+    },
+    {
+      "id": "47ca",
+      "username": "newman",
+      "password": "newman",
+      "email": "newman@gmail.com",
+      "phone": "12323444"
     }
   ]
 }

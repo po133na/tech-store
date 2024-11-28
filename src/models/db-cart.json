@@ -1,7 +1,7 @@
 {
   "cart": [
     {
-      "id": 2,
+      "id": "2",
       "name": "Robusta Whole Beans",
       "category": "Whole Beans",
       "price": "$18",
@@ -9,7 +9,7 @@
       "description": "Robusta beans offer a strong and intense flavor with a pronounced bitterness. Ideal for those who prefer bold morning coffee or milk-based drinks.\n"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Dark Roast Coffee",
       "category": "Ground Coffee",
       "price": "$16",
@@ -17,23 +17,7 @@
       "description": "Ground dark roast coffee with a deep, smoky flavor and robust aroma. Perfect for lovers of strong, intense coffee."
     },
     {
-      "id": 3,
-      "name": "Ground Arabica Coffee",
-      "category": "Ground Coffee",
-      "price": "$15",
-      "image": "/static/media/3.f50e6a715e2c6f97dc96.jpg",
-      "description": "Robusta beans offer a strong and intense flavor with a pronounced bitterness. Ideal for those who prefer bold morning coffee or milk-based drinks.\n"
-    },
-    {
-      "id": 11,
-      "name": "Coconut Milk",
-      "category": "Milk",
-      "price": "$4",
-      "image": "/static/media/11.fcdb506204fd7f6649e1.jpg",
-      "description": "Creamy coconut milk, perfect for adding a tropical twist to your coffee or smoothies. Dairy-free and vegan-friendly.\n"
-    },
-    {
-      "id": 1,
+      "id": "1",
       "name": "Arabica Whole Beans",
       "category": "Whole Beans",
       "price": "$20",

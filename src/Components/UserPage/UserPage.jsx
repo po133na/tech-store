@@ -56,6 +56,11 @@ const UserPage = () => {
             .catch((error) => console.error('Failed to delete account:', error));
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('userId');
+        window.location.href = '/login';
+    };
+
     if (!user) return <div>Loading user data...</div>;
 
     return (
@@ -107,17 +112,20 @@ const UserPage = () => {
                 </div>
             </div>
 
-            {isEditing ? (
-                <div className="actions">
-                    <button onClick={handleSaveChanges}>Save Changes</button>
-                    <button onClick={() => setIsEditing(false)}>Cancel</button>
-                </div>
-            ) : (
-                <div className="actions">
-                    <button onClick={() => setIsEditing(true)}>Edit</button>
-                    <button onClick={handleDeleteAccount}>Delete Account</button>
-                </div>
-            )}
+            <div className="actions">
+                {isEditing ? (
+                    <>
+                        <button onClick={handleSaveChanges}>Save Changes</button>
+                        <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    </>
+                ) : (
+                    <>
+                        <button onClick={() => setIsEditing(true)}>Edit</button>
+                        <button onClick={handleDeleteAccount}>Delete Account</button>
+                    </>
+                )}
+                <button className="logout-btn" onClick={handleLogout}>Logout</button>
+            </div>
         </div>
     );
 };
