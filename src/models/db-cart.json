@@ -1,14 +1,6 @@
 {
   "cart": [
     {
-      "id": "2",
-      "name": "Robusta Whole Beans",
-      "category": "Whole Beans",
-      "price": "$18",
-      "image": "/static/media/coffee-bean.5af50bc5c529e084f97e.jpeg",
-      "description": "Robusta beans offer a strong and intense flavor with a pronounced bitterness. Ideal for those who prefer bold morning coffee or milk-based drinks.\n"
-    },
-    {
       "id": "10",
       "name": "Dark Roast Coffee",
       "category": "Ground Coffee",
@@ -17,12 +9,20 @@
       "description": "Ground dark roast coffee with a deep, smoky flavor and robust aroma. Perfect for lovers of strong, intense coffee."
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Arabica Whole Beans",
       "category": "Whole Beans",
       "price": "$20",
       "image": "/static/media/1.41992ed118df6f2edc7c.jpg",
       "description": "Premium Arabica coffee beans with a rich, smooth flavor and a slight acidity. Perfect for espresso or filter coffee brewing."
+    },
+    {
+      "id": 6,
+      "name": "DeLonghi Coffee Machine",
+      "category": "Coffee Machines",
+      "price": "$300",
+      "image": "/static/media/6.cf5354d4371ebc590a88.jpg",
+      "description": "The DeLonghi semi-automatic coffee machine helps you make the perfect espresso or cappuccino. Sleek design and easy to use."
     }
   ]
 }

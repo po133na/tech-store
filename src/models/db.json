@@ -55,6 +55,20 @@
       "password": "newman",
       "email": "newman@gmail.com",
       "phone": "12323444"
+    },
+    {
+      "id": "7c37",
+      "username": "arfgard",
+      "password": "123",
+      "email": "afr@gmail.com",
+      "phone": "12345678"
+    },
+    {
+      "id": "1257",
+      "username": "dsdd",
+      "password": "123",
+      "email": "dsdsd@gmail.com",
+      "phone": "1234567"
     }
   ]
 }
