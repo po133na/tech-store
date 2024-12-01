@@ -12,8 +12,7 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { IconContext } from 'react-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMenu, toggleSidebar } from '../../store/slices/navbarSlice';
-import logo from '../Assets/Logo_coff.png';
-import cart_icon from '../Assets/cart-icon.png';
+
 
 const Navbar = () => {
     const dispatch = useDispatch();
@@ -40,14 +39,13 @@ const Navbar = () => {
                         </li>
                         {Sidebar.map((item, index) => (
                             <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span>
-                            </Link>
-                        </li>
-                        )
-                    })}
-                </ul>
+                                <Link to={item.path}>
+                                    {item.icon}
+                                    <span>{item.title}</span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
             </nav>
             <div className='nav-logo'>
                 <img src={logo} alt="" />
@@ -67,7 +65,6 @@ const Navbar = () => {
             </div>
         </div>
             </IconContext.Provider>
-            </>
     )
 }
 

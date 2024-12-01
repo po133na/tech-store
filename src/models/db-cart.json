@@ -1,15 +1,15 @@
 {
   "cart": [
     {
-      "id": "6",
-      "name": "DeLonghi Coffee Machine",
-      "category": "Coffee Machines",
-      "price": "$300",
-      "image": "/static/media/6.cf5354d4371ebc590a88.jpg",
-      "description": "The DeLonghi semi-automatic coffee machine helps you make the perfect espresso or cappuccino. Sleek design and easy to use."
+      "id": 5,
+      "name": "Milk",
+      "category": "Milk",
+      "price": "$3",
+      "image": "/static/media/oat-milk.a647af747d61703f723a.avif",
+      "description": "Fresh milk, perfect for adding to coffee. Its light texture and neutral taste make it a versatile choice for various milk-based beverages."
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Arabica Whole Beans",
       "category": "Whole Beans",
       "price": "$20",
@@ -17,20 +17,12 @@
       "description": "Premium Arabica coffee beans with a rich, smooth flavor and a slight acidity. Perfect for espresso or filter coffee brewing."
     },
     {
-      "id": "7",
-      "name": "Ceramic Mug",
-      "category": "Mugs",
-      "price": "$10",
-      "image": "/static/media/mug.fd9d04e0b480660f8e11.webp",
-      "description": "A durable ceramic mug with a sleek design. Perfect for enjoying your favorite coffee or tea, adding a cozy touch to your routine."
-    },
-    {
-      "id": 5,
-      "name": "Milk",
-      "category": "Milk",
-      "price": "$3",
-      "image": "/static/media/oat-milk.a647af747d61703f723a.avif",
-      "description": "Fresh milk, perfect for adding to coffee. Its light texture and neutral taste make it a versatile choice for various milk-based beverages."
+      "id": 3,
+      "name": "Ground Arabica Coffee",
+      "category": "Ground Coffee",
+      "price": "$15",
+      "image": "/static/media/3.f50e6a715e2c6f97dc96.jpg",
+      "description": "Robusta beans offer a strong and intense flavor with a pronounced bitterness. Ideal for those who prefer bold morning coffee or milk-based drinks.\n"
     }
   ]
 }
