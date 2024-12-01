@@ -3,6 +3,7 @@ import './Navbar.css'
 
 import logo from '../Assets/Logo_coff.png'
 import cart_icon from '../Assets/cart-icon.png'
+import user_icon from '../Assets/user-icon.png'
 
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
@@ -57,6 +58,7 @@ const Navbar = () => {
                 <Link to='/login'><button style={{height: '30px', width: '100px'}}>Login</button></Link>
                 <Link to='/sign-up'><button style={{height: '30px', width: '150px'}}>Registration</button></Link>
                 <Link to='/cart'><img src={cart_icon} alt="" /></Link>
+                <Link to='/account'><img src={user_icon} alt="" /></Link>
             </div>
         </div>
             </IconContext.Provider>
