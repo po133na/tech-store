@@ -1,67 +1,31 @@
-import React, { useState, useEffect, useCallback, useMemo, createContext } from 'react';
+import React, { useEffect, useCallback, useMemo, createContext } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCategories } from '../../store/slices/categoriesSlice'; // Redux action for categories
+import { fetchProducts, filterProductsByCategory } from '../../store/slices/productsSlice';
 import withLogging from './withLogging';
 import './Categories.css';
 
 export const CategoriesContext = createContext();
 
-const API_URL = 'http://localhost:5002';
-
 const Categories = ({ handleLog }) => {
-    const [categories, setCategories] = useState([]);
-    const [products, setProducts] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    const [filteredProducts, setFilteredProducts] = useState([]);
+    const dispatch = useDispatch();
+
+    const categories = useSelector((state) => state.categories.categories);
+    const products = useSelector((state) => state.products.products);
+    const filteredProducts = useSelector((state) => state.products.filteredProducts);
+    const selectedCategory = useSelector((state) => state.products.selectedCategory);
 
     useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const response = await axios.get(`${API_URL}/categories`);
-                setCategories(response.data);
-                handleLog('Categories fetched successfully with axios');
-            } catch (error) {
-                console.error('Error fetching categories with axios:', error);
-                handleLog('Failed to fetch categories');
-            }
-        };
-
-        fetchCategories();
-    }, [handleLog]);
-
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const response = await axios.get(`${API_URL}/products`);
-                setProducts(response.data);
-                handleLog('Products fetched successfully with axios');
-            } catch (error) {
-                console.error('Error fetching products with axios:', error);
-                handleLog('Failed to fetch products');
-            }
-        };
-
-        fetchProducts();
-    }, [handleLog]);
+        dispatch(fetchCategories());
+        dispatch(fetchProducts());
+        handleLog('Categories and products fetched successfully using Redux');
+    }, [dispatch, handleLog]);
 
     const handleCategorySelect = useCallback((category) => {
-        setSelectedCategory(category);
+        dispatch(filterProductsByCategory(category));
         handleLog(`Selected category: ${category}`);
-    }, [handleLog]);
-
-    useEffect(() => {
-        if (selectedCategory) {
-            const filtered = products.filter(product => product.category === selectedCategory);
-            setFilteredProducts(filtered);
-            handleLog('Products filtered by category');
-        } else {
-            setFilteredProducts([]);
-        }
-    }, [selectedCategory, products, handleLog]);
-
-    useEffect(() => {
-        handleLog('CategoriesPage component mounted');
-    }, [handleLog]);
+    }, [dispatch, handleLog]);
 
     const categoryList = useMemo(() => (
         categories.map((category) => (

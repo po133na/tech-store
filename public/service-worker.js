@@ -87,6 +87,7 @@ self.addEventListener('fetch', (event) => {
     );
   }
 
+  // Skip POST requests from being cached
   if (event.request.method === 'POST' && event.request.url.includes('/users')) {
     // Handle the registration POST request
     event.respondWith(
@@ -103,34 +104,8 @@ self.addEventListener('fetch', (event) => {
         })
     );
 
-    // Optionally, handle background sync for registration, if needed
-    if (event.request.url.includes('/users')) {
-      event.waitUntil(
-        // Sync the POST data for user registration if offline
-        caches.open(CACHE_NAME).then((cache) => {
-          return cache.put(event.request, new Response('Offline request for registration'));
-        })
-      );
-    }
-  }
-});
-
-// Background Sync for POST requests (e.g., registration or other forms)
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-post-data') {
-    console.log('[Service Worker] Syncing POST data...');
-    event.waitUntil(
-      fetch('/api/post-endpoint', {
-        method: 'POST',
-        body: JSON.stringify({ data: 'Background Sync Data' }),
-        headers: { 'Content-Type': 'application/json' },
-      })
-        .then((response) => {
-          if (!response.ok) throw new Error('Sync POST failed');
-          console.log('[Service Worker] POST sync successful');
-        })
-        .catch((err) => console.error('[Service Worker] POST sync failed:', err))
-    );
+    // Do not attempt to cache POST requests
+    return; // No cache action needed
   }
 });
 

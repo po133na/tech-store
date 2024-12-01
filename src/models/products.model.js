@@ -90,3 +90,5 @@ export default products;
 // Product Data: json-server --watch src/models/db-category.json --port 5002
 
 // Cart: json-server --watch src/models/db-cart.json --port 5003
+
+// json-server --watch src/models/db.json --port 5001 & json-server --watch src/models/db-category.json --port 5002 & json-server --watch src/models/db-cart.json --port 5003

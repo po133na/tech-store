@@ -1,46 +1,30 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import axios from 'axios';
+import React, { useMemo } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchCartItems, removeCartItem } from '../../store/slices/cartSlice'; // Import Redux actions
 import './Cart.css';
 
-const API_CART_URL = 'http://localhost:5003/cart';
-
 const Cart = () => {
-    const [cartItems, setCartItems] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        const fetchCartItems = async () => {
-            try {
-                const response = await axios.get(API_CART_URL);
-                setCartItems(response.data);
-            } catch (err) {
-                console.error('Failed to fetch cart items:', err);
-                setError('Failed to load cart items. Please try again.');
-            } finally {
-                setLoading(false);
-            }
-        };
+    const { cartItems, loading, error } = useSelector((state) => state.cart);
 
-        fetchCartItems();
-    }, []);
+    React.useEffect(() => {
+        dispatch(fetchCartItems());
+    }, [dispatch]);
 
-    const handleRemoveItem = async (id) => {
-        try {
-            await axios.delete(`${API_CART_URL}/${id}`);
-            setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-        } catch (err) {
-            console.error('Failed to remove item from cart:', err);
-            setError('Failed to remove item. Please try again.');
-        }
+    const handleRemoveItem = (id) => {
+        console.log('Removing item with id:', id); 
+        dispatch(removeCartItem(id));
     };
 
     const totalItems = useMemo(() => cartItems.length, [cartItems]);
     const totalPrice = useMemo(() => {
-        return cartItems.reduce((sum, item) => {
-            const price = parseFloat(item.price.replace('$', ''));
-            return sum + price;
-        }, 0).toFixed(2);
+        return cartItems
+            .reduce((sum, item) => {
+                const price = parseFloat(item.price.replace('$', ''));
+                return sum + price;
+            }, 0)
+            .toFixed(2);
     }, [cartItems]);
 
     const handlePlaceOrder = () => {

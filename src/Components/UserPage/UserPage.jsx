@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+// src/Components/UserPage/UserPage.jsx
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import './UserPage.css';
+import { setUser, clearUser } from '../../store/slices/userSlice';
 
 const API_URL = 'http://localhost:5001/users';
 
 const UserPage = () => {
-    const [user, setUser] = useState(null);
-    const [isEditing, setIsEditing] = useState(false);
-    const [newData, setNewData] = useState({});
+    const dispatch = useDispatch();
+    const { currentUser, isAuthenticated } = useSelector((state) => state.user);
 
     const currentUserId = localStorage.getItem('userId');
 
@@ -19,28 +21,16 @@ const UserPage = () => {
 
         axios
             .get(`${API_URL}/${currentUserId}`)
-            .then((response) => setUser(response.data))
-            .catch((error) => console.error('Failed to fetch user data:', error));
-    }, [currentUserId]);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setNewData({ ...newData, [name]: value });
-    };
-
-    const handleSaveChanges = () => {
-        if (!currentUserId) return;
-
-        axios
-            .put(`${API_URL}/${currentUserId}`, {
-                ...user,
-                ...newData,
-            })
             .then((response) => {
-                setUser(response.data);
-                setIsEditing(false);
+                dispatch(setUser(response.data));
             })
-            .catch((error) => console.error('Failed to update user:', error));
+            .catch((error) => console.error('Failed to fetch user data:', error));
+    }, [currentUserId, dispatch]);
+
+    const handleLogout = () => {
+        localStorage.removeItem('userId');
+        dispatch(clearUser());
+        window.location.href = '/login';
     };
 
     const handleDeleteAccount = () => {
@@ -51,17 +41,13 @@ const UserPage = () => {
             .then(() => {
                 alert('Account deleted!');
                 localStorage.removeItem('userId');
+                dispatch(clearUser());
                 window.location.href = '/login';
             })
             .catch((error) => console.error('Failed to delete account:', error));
     };
 
-    const handleLogout = () => {
-        localStorage.removeItem('userId');
-        window.location.href = '/login';
-    };
-
-    if (!user) return <div>Loading user data...</div>;
+    if (!currentUser) return <div>Loading user data...</div>;
 
     return (
         <div className="user-page">
@@ -69,61 +55,21 @@ const UserPage = () => {
 
             <div className="user-details">
                 <div>
-                    <strong>Username:</strong> {user.username}
+                    <strong>Username:</strong> {currentUser.username}
                 </div>
                 <div>
-                    <strong>Phone:</strong>{' '}
-                    {isEditing ? (
-                        <input
-                            type="text"
-                            name="phone"
-                            value={newData.phone || user.phone || ''}
-                            onChange={handleChange}
-                        />
-                    ) : (
-                        user.phone
-                    )}
+                    <strong>Phone:</strong> {currentUser.phone}
                 </div>
                 <div>
-                    <strong>Email:</strong>{' '}
-                    {isEditing ? (
-                        <input
-                            type="email"
-                            name="email"
-                            value={newData.email || user.email || ''}
-                            onChange={handleChange}
-                        />
-                    ) : (
-                        user.email
-                    )}
+                    <strong>Email:</strong> {currentUser.email}
                 </div>
                 <div>
-                    <strong>Password:</strong>{' '}
-                    {isEditing ? (
-                        <input
-                            type="password"
-                            name="password"
-                            value={newData.password || user.password || ''}
-                            onChange={handleChange}
-                        />
-                    ) : (
-                        '******'
-                    )}
+                    <strong>Password:</strong> ****** 
                 </div>
             </div>
 
             <div className="actions">
-                {isEditing ? (
-                    <>
-                        <button onClick={handleSaveChanges}>Save Changes</button>
-                        <button onClick={() => setIsEditing(false)}>Cancel</button>
-                    </>
-                ) : (
-                    <>
-                        <button onClick={() => setIsEditing(true)}>Edit</button>
-                        <button onClick={handleDeleteAccount}>Delete Account</button>
-                    </>
-                )}
+                <button onClick={handleDeleteAccount}>Delete Account</button>
                 <button className="logout-btn" onClick={handleLogout}>Logout</button>
             </div>
         </div>

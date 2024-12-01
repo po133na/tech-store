@@ -1,66 +1,59 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import './Hero.css';
+import React, { useEffect, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleDescription } from '../../store/slices/heroSlice';
 import { Link } from 'react-router-dom';
+import './Hero.css';
 
 const Hero = () => {
-    const [showDescription, setShowDescription] = useState(true);
+    const dispatch = useDispatch();
 
-    const toggleDescription = useCallback(() => {
-        setShowDescription(prev => !prev);
-    }, []); 
+    const showDescription = useSelector((state) => state.hero.showDescription);
 
-    const descriptionContent = useMemo(() => {
-        return (
-            <p>
-                It is a long established fact that a reader will be distracted by the readable content of a
-                page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
-                as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                their infancy. Various versions have evolved over the years, sometimes by accident.
-            </p>
-        );
-    }, []);
+    // Memoized description content
+    const descriptionContent = useMemo(() => (
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content of a
+            page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+            normal distribution of letters, as opposed to using 'Content here, content here', making it look
+            like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
+            as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+            their infancy. Various versions have evolved over the years, sometimes by accident.
+        </p>
+    ), []);
 
+    // Logging visibility changes
     useEffect(() => {
         console.log(`Description is now ${showDescription ? 'visible' : 'hidden'}`);
     }, [showDescription]);
 
-    useEffect(() => {
-        console.log('Component was Mounted');
-        return () => {
-            console.log('Component was Unmounted');
-        };
-    }, []);
-
     return (
-        <div className='hero'>
+        <div className="hero">
             <div className="hero-left">
-                <div>
-                    <div className="hero-coffee-icon">
-                        <h1>Coffeer</h1>
-                        <h1>For Everyone</h1>
-                    </div>
+                <div className="hero-coffee-icon">
+                    <h1>Coffeer</h1>
+                    <h1>For Everyone</h1>
                 </div>
+
                 <div className="hero-latest-btn">
-                    <div>
-                        {showDescription && descriptionContent}
-                    </div>
-                    <div className='butts'>
-                        <div>
-                            <button onClick={toggleDescription} className="hero-latest-button">
-                                {showDescription ? ':(' : ':)'}
-                            </button>
-                        </div>
-                        <div>
-                            <Link to={'/products'}>
-                                <button className="hero-latest-button">Shop Now</button>
-                            </Link>
-                        </div>
+                    {showDescription && <div>{descriptionContent}</div>}
+
+                    <div className="hero-buttons">
+                        <button
+                            onClick={() => dispatch(toggleDescription())}
+                            className="hero-latest-button"
+                        >
+                            {showDescription ? ':(' : ':)'}
+                        </button>
+
+                        <Link to="/products">
+                            <button className="hero-latest-button">Shop Now</button>
+                        </Link>
                     </div>
                 </div>
             </div>
+
             <div className="hero-right">
+                {/* Add right-side content */}
             </div>
         </div>
     );
