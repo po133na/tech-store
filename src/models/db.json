@@ -111,6 +111,41 @@
       "password": "baba1",
       "email": "baba@gmail.com",
       "phone": "123"
+    },
+    {
+      "id": "0e24",
+      "username": "murmau",
+      "password": "123",
+      "email": "mur@gmail.com",
+      "phone": "1234567"
+    },
+    {
+      "id": "6e14",
+      "username": "arfgaee",
+      "password": "1234",
+      "email": "arfga@arfg.com",
+      "phone": "1234567"
+    },
+    {
+      "id": "3a91",
+      "username": "fr",
+      "password": "123",
+      "email": "fr@mail.ru",
+      "phone": "12345678"
+    },
+    {
+      "id": "39a9",
+      "username": "frr",
+      "password": "123",
+      "email": "frr@mail.ru",
+      "phone": "123456"
+    },
+    {
+      "id": "184a",
+      "username": "grgr1",
+      "password": "123",
+      "email": "grgr@gmail.com",
+      "phone": "1234567"
     }
   ]
 }
